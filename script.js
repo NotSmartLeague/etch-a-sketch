@@ -42,5 +42,4 @@ getPixel.onclick = function(){
         newDiv.style.height = height + "px"; 
         targetNode.appendChild(newDiv);
     }
-    
 }
