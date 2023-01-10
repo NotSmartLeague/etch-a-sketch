@@ -22,13 +22,15 @@
                 <div class="item clear"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABMUlEQVR4nO2YQWoCQRAA65KrfiDgSfRgTv4kfzE/iYc8IYgP8BcB36BZQYgh19C5TEBEd2fd3qVtu6BhD7NDFzPTO9sQBEEQBMH90gfWgBiIb2AJjOpKPAArAwJyEnvgsY7Im4Gk5UK850rMDCQrJXHIkXgGfg0kKxVRyhT4MZCkNBEZAJ8GEpQmIj3gw0By0kREq8zOgSJjXJHGqotolNnXNNekQqZIY0jviJbIi9Iy74CnNOcY2GSM2WqJaJfZMhltCWm7zJ6TaUNC/sus1mRV52By8pxTDCRXpIvb7LFMGxLiSmTgZWt1edi3maVZrhXpovwer3obMp18EM9tXW0Zn1cUV5dGN9d4Vz9Wrn51XTUfbqUd9IWTBt3CS8t0yA03sQ9pJWpLBEEQBEGAcf4ANmLYpEqVJPYAAAAASUVORK5CYII="></div>
                 <div class="item pixel"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAAAsTAAALEwEAmpwYAAABBUlEQVR4nO3bMQ7CQAxEUd//WKxyrlBRhMYsZtkZ5z8phbtRhEcbJUQAAAAAAABgv9P0ejkiYiycU+43cETEY+H88Q10carllQvkllcu0I/zznba1x3o4pzMO9tpdOC/df8F3i9Qgg4sogO7bYxcILe8coESdGARHdhtY+QCueWVC5SgA4vowG4bIxfILa9coAQdWEQHdtsYuUBueeUCJejAIjqw28bIBXLL6/5ph8x7YbdL5r0wsNf0zptZ3oHdd37QgeiNDryiA9/QgWhu9f8sDrF5eQd2n+9+LkY73c+BszgHFtGBMEMHXtGBRXQgzOx+Nj3E59TuZ9MhPgMAAAAAEHf1BOUj4jAdeyebAAAAAElFTkSuQmCC"></div>
                 <div class="modal-pixel">
-                    <div class="pixel-select">
-                        <input type="range" min="1" max="64" id="rangePixel">
+                    <div class="wrapper">      
+                        <input type="range" min="1" max="64" id="rangePixel" oninput="this.nextElementSibling.value = this.value">
+                        <output></output>
                     </div>
                 </div>
             </div>
             <div class="main">
-    
+                <div class="grid">
+                </div>
             </div>
         </div>
     <script src="./script.js"></script>

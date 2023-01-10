@@ -9,14 +9,38 @@ const modalPixel = document.querySelector('.modal-pixel');
 function setInvisible(modal){
     modal.classList.toggle("visible")
 }
-
-pixel.onclick = function (){
-    setInvisible(modalPixel);
-}
 colorPicker.onclick = function(){
     setInvisible(modalColor);
 }
-rainbow.addEventListener("click", function(){})
+pixel.onclick = function (){
+    setInvisible(modalPixel);
+}
+
+
+/* rainbow.addEventListener("click", function(){})
 eraser.addEventListener("click", function(){})
 clear.addEventListener("click", function(){})
-pixel.addEventListener("click", function(){})
+pixel.addEventListener("click", function(){}) */
+
+const getPixel = document.getElementById('rangePixel');
+const targetNode = document.querySelector('.grid');
+
+getPixel.onclick = function(){
+    let resolution = getPixel.value * getPixel.value;
+    let width = 655 / getPixel.value;
+    let height = 655 / getPixel.value;
+    let newDiv;
+    if(newDiv == true){
+        for (let i = 0; i < resolution; i++){
+            console.log("working");
+        }
+    }
+    for(i = 0; i < resolution;i++){
+        newDiv = document.createElement('div');
+        newDiv.classList.add('grid-item');
+        newDiv.style.width = width + "px"; 
+        newDiv.style.height = height + "px"; 
+        targetNode.appendChild(newDiv);
+    }
+    
+}

@@ -22,7 +22,7 @@ body{
 }
 .main{
     background-color: white;
-    height: 70vh;
+    height: 80vh;
     width: 80vh;
     margin: 20vh;
     margin-top: 2vh;
@@ -78,21 +78,49 @@ img{
     left: 6px;
     display: none;
 }
-.visible{
-    display: block;
-}
 .color-select{
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 input{
+    position: relative;
     width: 90px;
     height: 75px;
     margin: 10px;
+    left: 5px;
 }
 .modal-pixel{
     position: relative;
     z-index: 1;
     display: none;
+}
+.visible{
+    display: block;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+
+}
+output{
+    position: relative;
+    top: -30px;
+    left: 10px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+}
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap:0;
+}
+.grid-item{
+    width: 1em;
+    height: 1em;
+    min-height: 10px;
+    border: solid;
 }
