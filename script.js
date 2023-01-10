@@ -39,7 +39,7 @@ getPixel.onclick = function(){
     for(i = 0; i < resolution;i++){
         newDiv = document.createElement('div');
         newDiv.classList.add('grid-item');
-        newDiv.style.width = width + "px";                              //this create every on the pixel, but only on the first click, have to work on it 
+        newDiv.style.width = width + "px";                              //this create every pixel, but only on the first click, have to work on it    
         newDiv.style.height = height + "px"; 
         console.log("div created")
         targetNode.appendChild(newDiv);
