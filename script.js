@@ -16,12 +16,17 @@ pixel.onclick = function (){                //showing modal on click calling the
     setInvisible(modalPixel);
 }
 
-
+const getColor = document.querySelector("#color");
+getColor.onchange = function(){
+    let color = getColor.value;
+    console.log(color);  
+    setInvisible(modalColor);                                  //this get the color from input
+    return color;
+}
 
 
 const getPixel = document.getElementById('rangePixel');                 //selecting the element that gets the resolution
 const targetNode = document.querySelector('.grid');                     //selecting the node where the div is to be added
-
 getPixel.onclick = function(){
     let resolution = getPixel.value * getPixel.value;                   //setting the resolution
     let width = 730 / getPixel.value;                                   //calculating with of single pixel (655 is the dimention of the white board)
@@ -39,18 +44,34 @@ getPixel.onclick = function(){
         for(i = 0; i < resolution;i++){
             newDiv = document.createElement('div');
             newDiv.classList.add('grid-item');
-            newDiv.style.width = width + "px";                              //this create every on the pixel, but only on the first click, have to work on it 
+            newDiv.style.width = width + "px";                              //this create every on the pixel
             newDiv.style.height = height + "px"; 
-            newDiv.setAttribute("onmouseenter", "toColor(this)")
+            //write if else to know what tool is selected(eraser, rainbow ecc)
+                newDiv.setAttribute("onmouseenter", "toColor(this)")
             console.log("div created")
             targetNode.appendChild(newDiv);
+            modalPixel.onclick = function (){                //showing modal on click calling the function
+                setInvisible(modalPixel);
+            }
         }
         
     }
+
     let newDiv = document.querySelector('.grid-item');
-    function toColor(pixel){
-        pixel.style.backgroundColor = "black";
+    function toColor(pixel){                                //setting the color of the pixels on hover
+        pixel.style.backgroundColor = getColor.value;
     }
     
+clear.onclick = function(){
+    let divNodeList = document.querySelectorAll('.grid-item')
+    let divToRemove = document.querySelector('.grid-item')
+    console.log("the node list is ", divNodeList);              //it reset all the pixel color 
+    divNodeList.forEach(
+        function(divToRemove){
+            divToRemove.style.backgroundColor ="white";
+            console.log("div removed");
+        }
+        )
+}
 
     
