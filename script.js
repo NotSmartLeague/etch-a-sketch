@@ -42,11 +42,12 @@ getColor.onchange = function(){
 
 const getPixel = document.getElementById('rangePixel');                 //selecting the element that gets the resolution
 const targetNode = document.querySelector('.grid');                     //selecting the node where the div is to be added
-
+let boardWidth = document.querySelector(".main").clientWidth;
+console.log(boardWidth);
 getPixel.onclick = function(){
     let resolution = getPixel.value * getPixel.value;                   //setting the resolution
-    let width = 730 / getPixel.value;                                   //calculating with of single pixel (655 is the dimention of the white board)
-    let height = 730 / getPixel.value;                                  //calculating heigh of single pixel 
+    let width = boardWidth / getPixel.value;                                   //calculating with of single pixel (655 is the dimention of the white board)
+    let height = boardWidth / getPixel.value;                                  //calculating heigh of single pixel 
     let newDiv = document.querySelector('.grid-item');
     let divNodeList = document.querySelectorAll('.grid-item')
     divNodeList.forEach(
